@@ -3,8 +3,7 @@ import s from "./styles.module.scss";
 import {Input} from "../../ui/input";
 import {observer} from "mobx-react-lite";
 import {useUserAgent} from "../../../../app/store/UAProvider";
-import welcome from '../../../assets/welcome.png'
-import Image from "next/image";
+
 
 export const LoginForm = observer(() => {
     const [userData, setUserData] = useState({
@@ -48,7 +47,6 @@ export const LoginForm = observer(() => {
             <div className={s.loginPage__container}>
                 <div className={s.loginPage__container_title}>
                     <h2>Hi, Welcome!</h2>
-                    <Image src={welcome} alt={'welcome'}/>
                 </div>
                 <p>
                     Provide your SIP Account
