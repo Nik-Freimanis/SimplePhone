@@ -10,7 +10,9 @@
     "48": "/icons/icon48.png",
     "192": "/icons/icon192.png"
   },
-  "permissions": [],
+  "permissions": [
+
+  ],
   "web_accessible_resources": [
     {
       "resources": ["index.html"],

@@ -7,7 +7,7 @@
   align-items: center;
   column-gap: 8px;
   min-height: 48px;
-  min-width: 172px;
+  min-width: 128px;
 
   font-size: 16px;
   font-weight: 600;
@@ -96,6 +96,26 @@
     &:hover {
       color: var(--main-text);
       background: var(--main-btn-green-hover);
+    }
+  }
+
+
+  //.button_fillCallGreen
+  &_fillCallRed {
+    width: 100%;
+    height: 54px;
+    background: var(--main-btn-red);
+    color: var(--main-text);
+
+
+    &:active {
+      color: var(--main-text);
+      background: var(--main-btn-red-hover);
+    }
+
+    &:hover {
+      color: var(--main-text);
+      background: var(--main-btn-red-hover);
     }
   }
 

@@ -4,7 +4,7 @@ import cn from 'classnames';
 import s from './button.module.scss'
 
 interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
-    variant?: 'fillSmall' | 'outlineSmall' | 'fillBig' | 'fillCallGreen' | 'outlineCallGreen',
+    variant?: 'fillSmall' | 'outlineSmall' | 'fillBig' | 'fillCallGreen' | 'outlineCallGreen' | 'fillCallRed',
     onClick?: ((e: any) => any | Promise<any>),
     loading?: boolean
 }
@@ -31,6 +31,7 @@ const Button = ({variant = 'fillSmall', onClick, disabled, loading = false, type
                 variant === 'fillBig' && s.button_fillBig,
                 variant === 'fillCallGreen' && s.button_fillCallGreen,
                 variant === 'outlineCallGreen' && s.button_outlineCallGreen,
+                variant === 'fillCallRed' && s.button_fillCallRed,
                 (loading || isLoading) && s.button_loading,
             )}
             onClick={clickHandler}

@@ -1,5 +1,8 @@
-.page-container {
+.pageContainer {
   margin: 0 auto;
   display: flex;
-  max-width: 600px;
+  min-width: 390px;
+  height: 530px;
+
+  overflow: hidden;
 }
