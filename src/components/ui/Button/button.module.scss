@@ -1,0 +1,140 @@
+@use "sass:math";
+
+.button {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  min-height: 48px;
+  min-width: 172px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer !important;
+  transition: all 0.3s ease 0s;
+
+  border-radius: 10px;
+
+
+
+
+  //.button_fillSmall
+  &_fillSmall {
+    background: var(--main-btn);
+    border: 1px solid black;
+    height: 53px;
+    border-radius: 10px;
+    color: var(--main-text);
+
+
+
+    &:active {
+      background: var(--main-btn);
+    }
+
+    &:hover {
+      background: var(--main-hover-btn);
+
+      box-shadow: var(--main-box-shadow);
+    }
+  }
+
+  //.button_outlineSmall
+  &_outlineSmall {
+    background: #ffffff;
+    border: 1px solid black;
+    height: 53px;
+    border-radius: 10px;
+    color: black;
+
+    &:active {
+      color: var(--main-text);
+      background: var(--main-btn);
+    }
+
+    &:hover {
+      color: var(--main-text);
+      background: var(--main-btn);
+    }
+  }
+
+  //.button_fillBig
+  &_fillBig {
+    width: 210px;
+    height: 54px;
+    background: var(--main-btn);
+
+    font-size: 24px;
+    text-transform: uppercase;
+
+    &:active {
+      color: var(--main-text);
+      background: var(--main-btn);
+    }
+
+    &:hover {
+      color: var(--main-text);
+      background: var(--main-hover-btn);
+    }
+  }
+
+  //.button_fillCallGreen
+  &_fillCallGreen {
+    width: 100%;
+    height: 54px;
+    background: var(--main-btn-green);
+    color: var(--main-text);
+
+
+    &:active {
+      color: var(--main-text);
+      background: var(--main-btn-green-hover);
+    }
+
+    &:hover {
+      color: var(--main-text);
+      background: var(--main-btn-green-hover);
+    }
+  }
+
+  //.button_fillCallGreen
+  &_outlineCallGreen {
+    width: 100%;
+    height: 54px;
+    background: none;
+    border: 1px solid var(--main-btn-green);
+    color: var(--main-btn-green);
+
+
+    &:active {
+      color: var(--main-btn-green-hover);
+      border: 1px solid var(--main-btn-green-hover);
+      box-shadow: var(--main-box-shadow);
+    }
+
+    &:hover {
+      color: var(--main-btn-green-hover);
+      border: 1px solid var(--main-btn-green-hover);
+      box-shadow: var(--main-box-shadow);
+
+    }
+  }
+
+  &:disabled:not(.button_loading) {
+    cursor: not-allowed !important;
+    opacity: 0.6;
+  }
+
+  //.button_loading
+  &_loading {
+    cursor: wait !important;
+    opacity: 0.6;
+
+    :global {
+      animation: pulse 2s infinite ease-in-out;
+    }
+  }
+}
+

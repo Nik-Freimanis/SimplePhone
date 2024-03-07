@@ -74,23 +74,6 @@
           accent-color: #000000;
         }
       }
-
-
-      button {
-        background: #000000;
-        border: 1px solid black;
-        height: 53px;
-        border-radius: 10px;
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-
-        &:hover {
-          //background: #ffffff;
-          cursor: pointer;
-          //color: black;
-        }
-      }
     }
   }
 }

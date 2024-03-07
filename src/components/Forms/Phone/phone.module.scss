@@ -1,0 +1,85 @@
+.phone {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+
+  &__container {
+    padding: 12px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all 0.3s ease 0s;
+
+
+    &_error {
+      margin: 0 auto;
+      color: rgba(222, 0, 0, 0.7);
+    }
+
+    &_number {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
+
+      span {
+        font-weight: 700;
+        text-align: left;
+      }
+    }
+
+    &_form {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 28px;
+
+      &_box {
+        display: flex;
+        width: 100%;
+
+        :global(.flag-dropdown) {
+          background-color: white !important;
+          border: none !important;
+          border-radius: 8px !important;
+
+          transition: all 0.3s ease 0s;
+
+
+          &:hover {
+            box-shadow: var(--main-box-shadow);
+          }
+
+          &:active {
+            box-shadow: var(--main-box-shadow);
+          }
+        }
+
+        :global(.selected-flag) {
+          border-radius: 8px !important;
+        }
+
+        :global(.form-control) {
+          border: none !important;
+          border-radius: 8px !important;
+          transition: all 0.3s ease 0s;
+
+
+          &:hover {
+            box-shadow: var(--main-box-shadow);
+          }
+
+          &:focus-visible {
+            box-shadow: var(--main-box-shadow);
+          }
+        }
+      }
+    }
+  }
+}

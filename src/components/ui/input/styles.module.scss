@@ -11,9 +11,11 @@
 
   &:hover {
     border-color: #000000;
+    box-shadow: var(--main-box-shadow);
   }
 
   &:focus-visible {
     border-color: #000000;
+    box-shadow: var(--main-box-shadow);
   }
 }

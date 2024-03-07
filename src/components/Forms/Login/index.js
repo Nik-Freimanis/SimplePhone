@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import s from "./styles.module.scss";
-import {Input} from "../../ui/input";
+import {Input} from "../../UI/Input";
 import {observer} from "mobx-react-lite";
-import {useUserAgent} from "../../../../app/store/UAProvider";
-
+import UAStore from "../../../../app/store/UAStore";
+import Button from "../../UI/Button/Button";
 
 export const LoginForm = observer(() => {
     const [userData, setUserData] = useState({
@@ -13,17 +13,16 @@ export const LoginForm = observer(() => {
         remember: false,
     });
     const [error, setError] = useState("");
-    const userAgentStore = useUserAgent();
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        if (userAgentStore.errorMessage) {
-            setError(userAgentStore.errorMessage);
+        if (UAStore.errorMessage) {
+            setError(UAStore.errorMessage);
             setIsLoading(false);
         } else {
             setError("");
         }
-    }, [userAgentStore.errorMessage]);
+    }, [UAStore.errorMessage]);
 
     const handleChange = (event) => {
         const {name, value, type} = event.target;
@@ -39,14 +38,14 @@ export const LoginForm = observer(() => {
         event.preventDefault();
         setIsLoading(true);
 
-        userAgentStore.registerUserAgent(userData);
+        UAStore.registerUserAgent(userData);
     };
 
     return (
         <div className={s.loginPage}>
             <div className={s.loginPage__container}>
                 <div className={s.loginPage__container_title}>
-                    <h2>Hi, Welcome!</h2>
+                    <h2>Welcome!</h2>
                 </div>
                 <p>
                     Provide your SIP Account
@@ -99,9 +98,7 @@ export const LoginForm = observer(() => {
                             <label htmlFor="remember">Remember Me</label>
                         </div>
                     </div>
-                    <button type="submit">
-                        Log in
-                    </button>
+                    <Button type={'submit'}>Log in</Button>
                 </form>
             </div>
         </div>

@@ -1,13 +1,18 @@
 :root {
   --main-bg: #fff;
-  --secondary-bg: rgba(57, 62, 70, 0.5);
+  --secondary-bg: #F0F3FB;
 
   --main-text: #fff;
-  --secondary-text: #00ADB5;
-  --gray-text: rgba(238, 238, 238, 0.5);
+  --gray-text: rgba(0, 0, 0, 0.5);
 
-  --main-btn: #00ADB5;
-  --hover-btn: #01898d;
+  --main-btn: rgba(0, 0, 0, 0.8);
+  --main-hover-btn: #000000;
+
+  --main-btn-green: #25773c;
+  --main-btn-green-hover: #205d30;
+
+  --main-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
 
   --main-input: rgba(57, 62, 70, 0.5);
 }
